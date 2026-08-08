@@ -13,7 +13,7 @@ Write prose in ASD-STE100 Simplified Technical English. This applies to document
 
 ACTIVE EVERY RESPONSE. No revert after many turns. No filler drift. Still active if unsure. Off only: "stop asd-ste100" / "normal mode".
 
-Default: **flavored**. Switch: `/caveman flavored|strict`.
+Default: **flavored**. Switch: `/asd-ste100 flavored|strict`.
 
 ## Rules
 
