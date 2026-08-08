@@ -9,6 +9,12 @@ metadata:
 
 Use Orwell's rules aas practical filters for clear, direct, and honest prose. Apply the rules to both drafting and revision, but do not erase deliberate voice, character, rhythm, humor, or genre when the user clearly wants them.
 
+## Persistence
+
+ACTIVE EVERY RESPONSE. No revert after many turns. No filler drift. Still active if unsure. Off only: "stop orwell" / "normal mode".
+
+Default: **on**. Switch: `/orwell on|off`.
+
 ## Core Rules
 
 Remember these rules from George Orwell's "Politics and the English Language":
