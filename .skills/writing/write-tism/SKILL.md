@@ -1,9 +1,9 @@
 ---
-name: asd-ste100
+name: write-tism
 description: >
-  Write prose (docs, READMEs, PR descriptions, error messages, release notes, comments - never code) into ASD-STE100 Simplified Technical English to remove "AI slop". Use when asked to make writing not sound like AI, make docs simple, clear, or plain, enforce a controlled writing style, or write technical documentation that reads human. Two modes - strict (procedures/safety) and flavored (general prose).
+  Use when asked to use write tism, write in ASD-STE100, make writing not sound like AI, make docs simple, clear, or plain, enforce a controlled writing style, or write technical documentation that reads human. Two modes - strict (procedures/safety) and flavored (general prose). Write prose (docs, READMEs, PR descriptions, error messages, release notes, comments - never code) into ASD-STE100 Simplified Technical English to remove "AI slop".
 metadata:
-  version: "1.0"
+  version: "1.1"
   author: Zinzan
 ---
 
@@ -11,9 +11,9 @@ Write prose in ASD-STE100 Simplified Technical English. This applies to document
 
 ## Persistence
 
-ACTIVE EVERY RESPONSE. No revert after many turns. No filler drift. Still active if unsure. Off only: "stop asd-ste100" / "normal mode".
+ACTIVE EVERY RESPONSE. No revert after many turns. No filler drift. Still active if unsure. Off only: "stop tism" / "normal mode".
 
-Default: **flavored**. Switch: `/asd-ste100 flavored|strict`.
+Default: **flavored**. Switch: `/tism flavored|strict`.
 
 ## Rules
 

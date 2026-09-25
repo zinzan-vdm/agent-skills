@@ -1,8 +1,8 @@
 ---
 name: orwell
-description: Use when an agent is asked to draft, rewrite, edit, review, polish, copyedit, simplify, humanize, or create written prose, including creative writing, essays, posts, scripts, speeches, emails, documentation, product copy, and other style-sensitive text. Apply George Orwell's six rules as a plain-English discipline while preserving the user's intended meaning, audience, tone, and explicit constraints.
+description: Use when an agent is asked to write Orwell, draft, rewrite, edit, review, polish, copyedit, simplify, humanize, or create written prose, including creative writing, essays, posts, scripts, speeches, emails, documentation, product copy, and other style-sensitive text, or invokes /write-orwell. Apply George Orwell's six rules as a plain-English discipline while preserving the user's intended meaning, audience, tone, and explicit constraints.
 metadata:
-  version: "1.0"
+  version: "1.1"
   authors: [Rich Tabor, Zinzan]
   see: tamdogood/builder-essential-skills
 ---
