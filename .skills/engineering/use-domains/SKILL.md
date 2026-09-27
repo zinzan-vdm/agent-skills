@@ -23,13 +23,18 @@ These files contain the domain model:
 
 ## Search order
 
+If the repo is a monorepo, load project-level docs before top-level docs. A project-level doc on the same topic wins over a top-level doc. Top-level fills gaps that the project level does not cover.
+
 To understand a domain concept in this project:
 
-1. **Read CONTEXT.md** for the term definition.
-2. **Read TAGS** in `docs/adr/TAGS` for the available tags.
-3. **Search ADRs by tag.** Search `docs/adr/` for frontmatter that matches a tag. Use a pattern such as `^- tag-name$`.
-4. **Search ADRs by content.** If tag search returns nothing, search the ADR bodies. Use the concept name or related terms.
-5. **Read full content** of the most relevant ADRs.
+1. Determine if this is a monorepo or a single-project repo.
+2. If monorepo, search the project-level `adr/` first.
+3. **Read CONTEXT.md** for the term definition.
+4. **Read TAGS** in the relevant `adr/` directory for the available tags.
+5. **Search ADRs by tag.** Search the relevant `adr/` for frontmatter that matches a tag. Use a pattern such as `^- tag-name$`.
+6. **Search ADRs by content.** If tag search returns nothing, search the ADR bodies. Use the concept name or related terms.
+7. **Read full content** of the most relevant ADRs.
+8. If monorepo and nothing found at project level, repeat steps 3-7 at the top-level `docs/adr/`.
 
 ## Apply what you find
 

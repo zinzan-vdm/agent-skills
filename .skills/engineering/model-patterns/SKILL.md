@@ -14,7 +14,9 @@ Reading `docs/patterns/` for guidance is not this skill. That is a one-line habi
 
 ## File structure
 
-Pattern documents live in one `docs/patterns/` directory at the project root:
+Determine the repo type before you write. A single-project repo has one set of patterns at the root. A monorepo can have patterns at two levels.
+
+Single-project repo:
 
 ```
 /
@@ -25,6 +27,20 @@ Pattern documents live in one `docs/patterns/` directory at the project root:
 │       ├── 0002-error-code-format.md
 │       └── 0003-service-layering.md
 └── src/
+```
+
+Monorepo with project-level patterns:
+
+```
+/
+├── docs/
+│   └── patterns/                    ← cross-project conventions
+├── services/
+│   └── billing/
+│       └── patterns/                ← per-project conventions
+└── front/
+    └── web/
+        └── patterns/
 ```
 
 Create files lazily. Create them only when you have a pattern to write. If no `docs/patterns/` directory exists, create it when you need the first pattern document. If no `docs/patterns/TAGS` file exists, create it when you write the first pattern with tags.
@@ -43,9 +59,18 @@ If the topic passes none of these tests, it is not a pattern. Skip it.
 
 ### Write a pattern document
 
+Determine where the pattern belongs:
+
+1. Is the repo a monorepo or a single-project repo?
+2. If single-project repo, write all patterns to `docs/patterns/`.
+3. If monorepo, determine the scope:
+   - Cross-project pattern applies to all projects. Write it to `docs/patterns/`.
+   - Per-project pattern applies to one project. Write it to `<project>/patterns/`.
+4. If a per-project pattern overrides a top-level pattern, add the override in its frontmatter. For example: `overrides: 0001-name`.
+
 To write a pattern document:
 
-1. Scan `docs/patterns/` for the highest existing number. Increment by one for the new file.
+1. Scan the target directory for the highest existing number. Increment by one for the new file.
 2. Write the slug. Use a short kebab-case name. For example: `0001-cursor-pagination.md`.
 3. Follow the format in [PATTERN-FORMAT.md](./PATTERN-FORMAT.md).
 4. Write the rule in imperative voice. Use short sentences. Use one name for one thing.

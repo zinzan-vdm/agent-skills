@@ -15,7 +15,9 @@ Reading `CONTEXT.md` or `docs/adr/` for guidance is not this skill. That is a on
 
 ## File structure
 
-Most repos have a single context:
+Determine the repo type before you write. A single-project repo has one project at the root. A monorepo has multiple projects. The same doc structure applies at both levels.
+
+Single-project repo:
 
 ```
 /
@@ -28,20 +30,20 @@ Most repos have a single context:
 └── src/
 ```
 
-If a `CONTEXT-MAP.md` exists at the root, the repo has multiple contexts. The map points to where each one lives:
+Monorepo with project-level documents:
 
 ```
 /
-├── CONTEXT-MAP.md
+├── CONTEXT.md
 ├── docs/
-│   └── adr/                          ← system-wide decisions
-├── src/
-│   ├── ordering/
-│   │   ├── CONTEXT.md
-│   │   └── docs/adr/                 ← context-specific decisions
-│   └── billing/
+│   └── adr/                          ← cross-project decisions
+├── services/
+│   └── ordering/
 │       ├── CONTEXT.md
-│       └── docs/adr/
+│       └── adr/                      ← per-project decisions
+└── front/
+    └── web/
+        └── adr/
 ```
 
 Create files lazily. Create them only when you have something to write. If no `CONTEXT.md` exists, create one when you resolve the first term. If no `docs/adr/` directory exists, create it when you need the first ADR. If no `docs/adr/TAGS` file exists, create it when you write the first ADR with tags.
@@ -74,9 +76,18 @@ When you resolve a term, update `CONTEXT.md` right there. Do not batch the updat
 
 When the three conditions are true, create an ADR.
 
+Determine where the ADR belongs:
+
+1. Is the repo a monorepo or a single-project repo?
+2. If single-project repo, write all ADRs to `docs/adr/`.
+3. If monorepo, determine the scope:
+   - Cross-project ADR affects all or most projects. Write it to `docs/adr/`.
+   - Per-project ADR affects one project only. Write it to `<project>/adr/`.
+4. If a per-project ADR overrides a top-level ADR, add the override in its frontmatter. For example: `overrides: 0001-name`.
+
 To write an ADR:
 
-1. Scan `docs/adr/` for the highest existing number. Increment it by one for the new file.
+1. Scan the target directory for the highest existing number. Increment it by one for the new file.
 2. Write the slug. Use a short kebab-case name. For example: `0001-event-sourced-orders.md`.
 3. Write the decision. Use the [ADR-FORMAT.md](./ADR-FORMAT.md).
 4. Add at least one tag in the frontmatter. Use terms from the `CONTEXT.md` glossary.
