@@ -1,12 +1,12 @@
 ---
-name: model-patterns
+name: document-patterns
 description: Document code patterns and engineering standards. Use when you set a convention or write a rules document for how to write code.
 metadata:
   version: "1.0"
   author: Zinzan van der Merwe
 ---
 
-# Model Patterns
+# Document Patterns
 
 Build and sharpen the code patterns and engineering standards of the project. This is the active discipline. Recognize when a convention needs a formal rule. Write the rule. Keep it current as the codebase changes.
 

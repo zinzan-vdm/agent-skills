@@ -76,7 +76,7 @@ If you search config docs and find nothing about a variable:
    for what variables it reads.
 2. Surface the gap.
    Show the user the variable name and the file location.
-3. If the user agrees, use model-config to create or update the doc.
+3. If the user agrees, use document-config to create or update the doc.
 
 ## Conflicts
 

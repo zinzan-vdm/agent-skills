@@ -1,12 +1,12 @@
 ---
-name: model-domains
+name: document-domains
 description: Build and maintain the project domain model. Use when you discuss codebase terms, write a CONTEXT.md, or record an ADR.
 metadata:
   version: "1.0"
   author: Zinzan
 ---
 
-# Model Domains
+# Document Domains
 
 Build and sharpen the domain model of the project as you design.
 This is the active discipline. Challenge terms. Invent edge-case scenarios. Write the glossary and decisions when they crystallize.

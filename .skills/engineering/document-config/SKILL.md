@@ -1,12 +1,12 @@
 ---
-name: model-config
+name: document-config
 description: Model config fields in docs/conf/. Use for config design.
 metadata:
   version: "1.0"
   author: Zinzan van der Merwe
 ---
 
-# Model Config
+# Document Config
 
 Build and maintain the system variable definitions.
 A system variable drives behavior from an external source.
@@ -17,7 +17,7 @@ This skill helps you document each variable, its type,
 its source, and what it controls.
 
 This skill does not cover config architecture decisions.
-Put those in an ADR. Use model-domains for that.
+Put those in an ADR. Use document-domains for that.
 
 ## What is a system variable
 

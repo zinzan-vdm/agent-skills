@@ -48,4 +48,4 @@ An ADR with status `superseded by ADR-NNNN` is no longer current. Read the super
 
 ## When something is missing
 
-If you search the glossary and ADRs and find nothing about a concept, tell the user. Ask if the concept needs a formal definition. If the user agrees, use `model-domains` to document it.
+If you search the glossary and ADRs and find nothing about a concept, tell the user. Ask if the concept needs a formal definition. If the user agrees, use `document-domains` to document it.

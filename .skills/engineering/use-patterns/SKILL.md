@@ -49,4 +49,4 @@ If two patterns give conflicting rules, surface both to the user. Let the user r
 
 ## When a pattern is wrong
 
-If the code shows a better approach than the pattern, the pattern may be stale. Surface it to the user. If the user agrees, use `model-patterns` to update the pattern document.
+If the code shows a better approach than the pattern, the pattern may be stale. Surface it to the user. If the user agrees, use `document-patterns` to update the pattern document.
