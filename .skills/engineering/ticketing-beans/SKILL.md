@@ -41,6 +41,31 @@ When this skill loads:
 The user prompt decides what to do with Beans.
 The primed instructions tell you how.
 
+## Configure the project after init
+
+Run `beans init` in the project root.
+This creates `.beans.yml` and the `.beans` directory.
+
+The `.beans.yml` file needs these minimum values:
+
+| Field | Purpose | Example |
+|-------|---------|---------|
+| `project.name` | Name for the UI | `my-project` |
+| `beans.prefix` | Prefix for bean IDs | `myproj-` |
+
+The prefix is the most important field.
+It controls how bean IDs look: `myproj-abc1`, `myproj-abc2`.
+
+All other fields have sensible defaults:
+
+- `beans.path` defaults to `.beans`
+- `beans.id_length` defaults to 4
+- `beans.default_status` defaults to `todo`
+- `beans.default_type` defaults to `task`
+
+Open `.beans.yml` after `beans init` and set the prefix.
+The file is YAML with comments that explain each field.
+
 ## Troubleshooting
 
 | Problem | Action |
