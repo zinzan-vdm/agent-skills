@@ -47,15 +47,15 @@ Run `beans init` in the project root.
 This creates `.beans.yml` and the `.beans` directory.
 
 Set `project.name` from the project directory name.
-Set `beans.prefix` from a short form of the project name.
+Set `beans.prefix` to the same value.
 
 For a project directory called `cli-roundtable`:
 - `project.name` is `cli-roundtable`
-- `beans.prefix` is `cli-`
+- `beans.prefix` is `cli-roundtable`
 
 For a project directory called `meety`:
 - `project.name` is `meety`
-- `beans.prefix` is `mee-`
+- `beans.prefix` is `meety`
 
 All other fields have defaults that work without changes:
 
