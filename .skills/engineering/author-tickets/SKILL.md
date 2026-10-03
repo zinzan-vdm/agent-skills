@@ -1,5 +1,5 @@
 ---
-name: model-tickets
+name: author-tickets
 description: >-
   Plan tickets from a brief. Decompose into epics and tasks.
 metadata:
@@ -7,7 +7,7 @@ metadata:
   author: Zinzan van der Merwe
 ---
 
-# Model Tickets
+# Author Tickets
 
 Plan work and write tickets from a brief.
 This skill produces the plan and the ticket bodies.

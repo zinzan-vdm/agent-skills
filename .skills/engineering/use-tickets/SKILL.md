@@ -14,7 +14,7 @@ Read and understand tickets in the project.
 Use existing tickets to get context before you write code.
 
 This skill does not describe how to plan or author tickets.
-That is the model-tickets skill.
+That is the author-tickets skill.
 
 ---
 
