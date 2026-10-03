@@ -54,6 +54,12 @@ When a task is complete, the body has a Summary of Changes section.
 It lists the files created or changed.
 Read this section if you pick up work after another agent.
 
+### Reasons for Scrapping
+
+When a task is scrapped, the body has a Reasons for Scrapping
+section. It explains why the work will not be done.
+Read this section to understand why a ticket was abandoned.
+
 ---
 
 ## How to read a ticket
@@ -134,6 +140,12 @@ Set the status to `in-progress`.
 2. If all pass, set the status to `completed`.
 3. Append a Summary of Changes section to the body.
    List the files created or changed.
+
+### When you scrap a ticket
+
+1. Set the status to `scrapped`.
+2. Append a Reasons for Scrapping section to the body.
+   Explain why the work will not be done.
 
 ### When the task depends on other work
 

@@ -145,6 +145,16 @@ A good task has all of these:
 Good task name: "User can register with email and password"
 Bad task name: "Add bcrypt hashing to user model"
 
+## Close a ticket
+
+When you complete a ticket, add a Summary of Changes section
+to the body. List the files you created or changed.
+Describe what the implementation does.
+
+When you scrap a ticket, add a Reasons for Scrapping section
+to the body. Explain why the work will not be done.
+This helps future readers understand the decision.
+
 ## Reference material
 
 - ticket-format.md: template for one task body

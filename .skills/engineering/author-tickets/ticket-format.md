@@ -85,3 +85,19 @@ Bad examples:
 
 - `The code looks clean` (not checkable)
 - `Performance is good` (not specific)
+
+---
+
+## Summary of Changes
+
+Add this section when you complete the ticket.
+List the files you created or changed.
+Describe what the implementation does.
+
+---
+
+## Reasons for Scrapping
+
+Add this section when you scrap the ticket.
+Explain why the work will not be done.
+Use this to help future readers understand the decision.
