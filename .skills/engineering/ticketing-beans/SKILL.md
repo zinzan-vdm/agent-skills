@@ -46,25 +46,26 @@ The primed instructions tell you how.
 Run `beans init` in the project root.
 This creates `.beans.yml` and the `.beans` directory.
 
-The `.beans.yml` file needs these minimum values:
+Set `project.name` from the project directory name.
+Set `beans.prefix` from a short form of the project name.
 
-| Field | Purpose | Example |
-|-------|---------|---------|
-| `project.name` | Name for the UI | `my-project` |
-| `beans.prefix` | Prefix for bean IDs | `myproj-` |
+For a project directory called `cli-roundtable`:
+- `project.name` is `cli-roundtable`
+- `beans.prefix` is `cli-`
 
-The prefix is the most important field.
-It controls how bean IDs look: `myproj-abc1`, `myproj-abc2`.
+For a project directory called `meety`:
+- `project.name` is `meety`
+- `beans.prefix` is `mee-`
 
-All other fields have sensible defaults:
+All other fields have defaults that work without changes:
 
 - `beans.path` defaults to `.beans`
 - `beans.id_length` defaults to 4
 - `beans.default_status` defaults to `todo`
 - `beans.default_type` defaults to `task`
 
-Open `.beans.yml` after `beans init` and set the prefix.
-The file is YAML with comments that explain each field.
+Edit `.beans.yml` after `beans init`.
+The file is YAML. Each field has a comment that explains it.
 
 ## Troubleshooting
 
