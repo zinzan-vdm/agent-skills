@@ -22,11 +22,11 @@ This keeps the context small and the agent focused.
 | Skill | Load when |
 |---|---|
 | `use-domains` | You need to understand the domain model and architecture decisions. |
-| `model-domains` | You learn something about the application domain and need to document it. |
+| `document-domains` | You learn something about the application domain and need to document it. |
 | `use-patterns` | You need to understand codebase patterns and engineering standards. |
-| `model-patterns` | You learn a new pattern or standard and need to document it. |
+| `document-patterns` | You learn a new pattern or standard and need to document it. |
 | `use-config` | You need to understand how configuration works for a service or app. |
-| `model-config` | You learn about configuration variables and need to document them. |
+| `document-config` | You learn about configuration variables and need to document them. |
 | `write-tism` | You need to update or write documentation. Use this as the writing system for all technical authoring. |
 | `grill` | The agent needs to discuss and understand the subject more deeply. |
 
@@ -50,13 +50,13 @@ Load all the skills that match.
 A `use-*` skill means read and understand the docs.
 Do not write to the project docs when you load a `use-*` skill.
 
-A `model-*` skill means create or update the docs.
-The `model-*` skills include enough reading logic to write correctly.
+A `document-*` skill means create or update the docs.
+The `document-*` skills include enough reading logic to write correctly.
 They scan for existing file numbers, check existing tags, and read what they need.
-Do not load a `use-*` skill for the same area when you load a `model-*` skill.
-The `model-*` skill is the single skill for write tasks.
+Do not load a `use-*` skill for the same area when you load a `document-*` skill.
+The `document-*` skill is the single skill for write tasks.
 
-A task that reads and writes the same area loads only the `model-*` skill.
+A task that reads and writes the same area loads only the `document-*` skill.
 
 ### Step 4: Use `write-tism` for all documentation text
 
@@ -85,7 +85,7 @@ The user says: "We have a new entity called Invoice. It tracks payment status."
 Load these skills:
 1. `grill`: to discuss the concept with the user.
    Clarify boundaries, relationships, and edge cases.
-2. `model-domains`: to write the CONTEXT.md entry and an ADR.
+2. `document-domains`: to write the CONTEXT.md entry and an ADR.
 3. `write-tism`: to format the documentation.
 
 ### Scenario B: Understand config before deployment
@@ -103,7 +103,7 @@ The user says: "All our API routes should use cursor pagination."
 
 Load these skills:
 1. `grill`: to discuss the rule and make sure the boundaries are clear.
-2. `model-patterns`: to write the pattern document.
+2. `document-patterns`: to write the pattern document.
 3. `write-tism`: to format the pattern document.
 
 ### Scenario D: Read docs to implement a feature
@@ -121,7 +121,7 @@ Load these skills:
 The user says: "Add config docs for the notification service."
 
 Load these skills:
-1. `model-config`: to write the config document.
+1. `document-config`: to write the config document.
 2. `write-tism`: to format the document.
 3. `grill`: if the variable sources or defaults are unclear.
 
@@ -136,12 +136,12 @@ Only load skills you need. Extra skills add tokens without value.
 When you load multiple skills, load them in this order:
 
 1. `grill`: first, to clarify the subject.
-2. `model-*`: second, to write new or updated docs.
-   The `model-*` skill reads what it needs as part of writing.
+2. `document-*`: second, to write new or updated docs.
+   The `document-*` skill reads what it needs as part of writing.
 3. `use-*`: last, for read-only tasks that do not write.
-   Load these only when the task does not need a `model-*` skill.
+   Load these only when the task does not need a `document-*` skill.
 4. `write-tism`: always last, to apply the writing system to the model output.
 
-Read-only task: `use-*` skill (no `model-*` needed).
-Write or mixed task: `model-*` skill (no `use-*` for the same area needed).
+Read-only task: `use-*` skill (no `document-*` needed).
+Write or mixed task: `document-*` skill (no `use-*` for the same area needed).
 This keeps each load set minimal and focused.
