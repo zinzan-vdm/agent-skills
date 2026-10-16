@@ -77,6 +77,11 @@ Load `grill` when any of these are true:
 `grill` is not for each small question. It is for a structured conversation
 about the subject. Use it when the discussion needs depth.
 
+Pair `grill` with `document-questions` when a grill session produces questions.
+Record each question in `docs/questions/`.
+The question file preserves the answer for future sessions.
+The pair works both ways: grill finds gaps, document-questions stores them.
+
 ## Example scenarios
 
 ### Scenario A: Document a new domain concept
