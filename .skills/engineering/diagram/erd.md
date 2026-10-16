@@ -84,4 +84,4 @@ erDiagram
 1. Name entities in uppercase. Use underscore between words.
 2. Put a key on every entity.
 3. Use `||` on the "one" side of a relation.
-4. One or more is `}|`. The token `}{` is not in the Mermaid docs. It breaks the diagram.
+4. Use `}|` on the "many" side of a relation. The token `}{` is not in the Mermaid docs. It breaks the diagram.
