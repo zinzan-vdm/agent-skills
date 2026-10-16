@@ -4,7 +4,7 @@ description: >-
   Capture and track open questions about the project.
   Use when you need to record a knowledge gap or answer a recorded question.
 metadata:
-  version: "1.0"
+  version: "1.1"
   author: Zinzan van der Merwe
 ---
 
@@ -87,10 +87,12 @@ A closed question is ready for purge.
 
 ### Purge
 
-Remove closed question files from the repo.
+Remove old question files from the repo.
 A future reader can find the answer in the git history.
-Remove only closed questions. Do not remove open or answered questions.
-After purge, the next question starts at 0001.
+
+Purge targets must be `closed`.
+Do not purge `open` or `answered` questions.
+After a purge batch, the next question starts at 0001.
 
 ## File format
 
@@ -198,13 +200,29 @@ If the topic passes none of these tests, it is not a question. Skip it.
 
 ### Purge closed questions
 
-When a question is no longer needed:
+Purge removes closed question files from the repo.
+The answer stays in git history.
+It is safe to remove.
 
-1. Delete the question file from the repo.
-2. Commit the deletion.
-3. The git history preserves the question and its answer.
+Use one of these strategies based on the user request:
 
-After a batch purge, verify the directory aligns with the numbering.
+**Strategy 1: Purge all closed questions.**
+Remove every question with status `closed`.
+This is the default strategy.
+Use it unless the user gives a more specific rule.
+
+**Strategy 2: Purge questions before a date.**
+Remove closed questions created before a given date.
+The date is in the `created` frontmatter field.
+Use this when the user says purge old questions.
+
+**Strategy 3: Purge before a date that are closed.**
+Remove questions that meet both conditions:
+- status is `closed`
+- `created` is before the given date
+
+Do not purge `open` or `answered` questions for any strategy.
+After a purge batch, verify the directory is empty or aligned.
 The next new question starts at 0001.
 
 ### Search for open questions
