@@ -5,7 +5,7 @@ description: >-
   Reads project docs, clarifies understanding, and selects domain/config/pattern skills
   to load.
 metadata:
-  version: "1.0"
+  version: "1.1"
   author: Zinzan van der Merwe
 ---
 
@@ -29,6 +29,7 @@ This keeps the context small and the agent focused.
 | `document-config` | You learn about configuration variables and need to document them. |
 | `write-tism` | You need to update or write documentation. Use this as the writing system for all technical authoring. |
 | `grill` | The agent needs to discuss and understand the subject more deeply. |
+| `document-questions` | You work on a project that has open questions or you need to record a knowledge gap. |
 
 ## How to select skills
 
@@ -124,6 +125,18 @@ Load these skills:
 1. `document-config`: to write the config document.
 2. `write-tism`: to format the document.
 3. `grill`: if the variable sources or defaults are unclear.
+
+### Scenario F: Check open questions before implementation
+
+The user says: "Implement the payment retry feature."
+
+Load these skills:
+1. `document-questions`: to check for open questions that affect the feature.
+   Scan for questions tagged `payment` or `retry`.
+   Answer any that block work.
+2. `use-domains`: to understand the billing domain terms and decisions.
+3. `use-patterns`: to find the code patterns you must follow.
+4. `write-tism`: for any documentation the feature needs.
 
 ## What to do when no skill matches
 
